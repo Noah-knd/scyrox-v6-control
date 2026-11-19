@@ -1,0 +1,8 @@
+/target/
+/dist/
+Cargo.lock
+*.lnk
+*.log
+scyrox_v6_profile.json
+.DS_Store
+Thumbs.db

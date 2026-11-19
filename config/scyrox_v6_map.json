@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "device_name": "Scyrox V6",
+  "protocol": "compx-nordic52-report8",
+  "notes": [
+    "Compx / Nordic nRF52840 17-byte HID protocol (Report ID 0x08, checksum sum == 0x55 mod 256).",
+    "VID 0x3554, PIDs: 0xF5F7 (8K dongle), 0xF5F4 (standard dongle), 0xF5F6 (wired), Usage Page 0xFF02 / Usage 0x0002.",
+    "EEPROM/flash offsets can vary slightly across firmware revisions. Use the built-in HID Diagnostics tab to dump flash (0x08) and verify offsets before unlocking writes."
+  ],
+  "usb": {
+    "vid": 13652,
+    "pids": [
+      { "pid": 62967, "label": "8K Wireless Dongle (0xF5F7)", "max_polling_hz": 8000 },
+      { "pid": 62964, "label": "Standard Wireless Dongle (0xF5F4)", "max_polling_hz": 1000 },
+      { "pid": 62966, "label": "USB-C Wired (0xF5F6)", "max_polling_hz": 8000 }
+    ],
+    "usage_page": 65282,
+    "usage": 2,
+    "expected_mid": 2
+  },
+  "flash_map": {
+    "polling_rate_addr": 0,
+    "dpi_stage_count_addr": 2,
+    "active_dpi_stage_addr": 4,
+    "lod_addr": 10,
+    "dpi_stages_base_addr": 12,
+    "dpi_stage_stride": 4,
+    "dpi_colors_base_addr": 44,
+    "dpi_color_stride": 4,
+    "debounce_ms_addr": 169,
+    "motion_sync_addr": 171,
+    "sleep_time_addr": 173,
+    "angle_snap_addr": 175,
+    "ripple_control_addr": 177,
+    "sensor_mode_addr": 181,
+    "long_range_addr": 183,
+    "active_profile_addr": 185
+  }
+}

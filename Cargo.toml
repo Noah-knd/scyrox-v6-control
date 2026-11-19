@@ -1,0 +1,23 @@
+[package]
+name = "scyrox-v6-control"
+version = "0.1.0"
+edition = "2021"
+description = "Unofficial native Windows control utility for the Scyrox V6 wireless gaming mouse written in Rust."
+license = "MIT"
+
+[dependencies]
+eframe = "0.31"
+egui = "0.31"
+hidapi = "2.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
